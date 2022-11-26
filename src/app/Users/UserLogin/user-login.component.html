@@ -1,0 +1,32 @@
+<div class="container">
+    <form [formGroup] = "loginForm" >
+      <h1>Login</h1>
+      <div class="ui divider"></div>
+      <div class="ui form">
+        <div class="field">
+          <label>Email</label>
+          <input
+            type="text"
+            name="email"
+            placeholder="Email"
+            formControlName="email"
+          />
+          </div>
+        
+        <div class="field">
+          <label>Password</label>
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            formControlName="password"
+          />
+        </div>  
+        <button class="fluid ui button blue" (click)="Loginsubmit()"  >Login</button>
+        <br>
+           <a [routerLink]="['/register']">New User? click to SignUp </a>
+        </div>
+
+    </form>
+
+  </div>

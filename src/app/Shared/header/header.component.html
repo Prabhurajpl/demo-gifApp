@@ -1,0 +1,16 @@
+<div class="header">
+  <div class="column">
+    <h1 class="appheading">Gif Manager App</h1>
+  </div>
+  <div *ngIf="islogin_or_register">
+  <div class="column">
+    <h1 class="appheading">welcome : {{userEmail}}</h1>
+  </div>
+  <div class="column">
+  <button  mat-menu-item class="btnlogout" (click)="Logout()">
+      <mat-icon>power_settings_new</mat-icon>
+      <span class="aligned-with-icon">Logout</span>
+    </button>   
+  </div>
+</div>
+</div>

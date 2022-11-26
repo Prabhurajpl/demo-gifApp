@@ -1,0 +1,118 @@
+
+
+.sidebar {
+  position: absolute;
+  width: 15%;
+  height: 100vh;
+  background: #d5d0e0;
+  font-size: 0.65em;
+}
+.sidebar ul li{
+  padding: 15px;
+  border-bottom: 1px solid #289569;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  border-top: 1px solid rgba(255,255,255,0.05);
+  font-family: sans-serif;
+  font-size: 15px;
+}  
+
+/* CSS */
+.createbtn {
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 10;
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: 85%;
+}
+
+.createbtn:hover,
+.createbtn:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.createbtn:hover {
+  transform: translateY(-1px);
+}
+
+.createbtn:active {
+  background-color: #F0F0F1;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(0);
+}
+
+
+// .nav {
+//   position: relative;
+//   margin: 0 15%;
+//   text-align: right;
+  
+//   transform: translateY(-50%);
+//   font-weight: bold;
+// }
+
+// .nav ul {
+//   list-style: none;
+  
+//   li {
+//     position: relative;
+//     margin: 3.2em 0;
+    
+//     a {
+//       line-height: 5em;
+//       text-transform: uppercase;
+//       text-decoration: none;
+//       letter-spacing: 0.4em;
+//       color: rgba(#FFF, 0.35);
+//       display: block;
+//       transition: all ease-out 300ms;
+//     }
+    
+//     &.active a {
+//       color: white;
+//     }
+    
+//     &:not(.active)::after {
+//       opacity: 0.2;
+//     }
+    
+//     &:not(.active):hover a {
+//       color: rgba(#FFF, 0.75);
+//     }
+    
+//     &::after {
+//       content: '';
+//       position: absolute;
+//       width: 100%;
+//       height: 0.2em;
+//       background: black;
+//       left: 0;
+//       bottom: 0;
+//       background-image: linear-gradient(to right, #5e42a6, #b74e91)
+//     }
+//   }
+// }
+

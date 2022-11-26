@@ -1,0 +1,11 @@
+<div *ngIf="iscategorychecked"  class="container">
+    <div class="categorysection">
+        <label >Add to category </label>
+        <select [(ngModel)]="selectedValue">
+         <option *ngFor="let category of categorylist; let i =index">{{category}}</option>
+        </select>
+    </div>
+    <div class="btnaddsection">
+        <button class="btnaddcategory" (click)="handleAddCategoryclick()">Add</button>
+    </div>
+  </div>
