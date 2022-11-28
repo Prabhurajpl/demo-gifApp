@@ -10,9 +10,22 @@
             name="email"
             placeholder="Email"
             formControlName="email"
+            [class.is-invalid]="UserRegistrationForm.get('email')?.invalid
+            && (UserRegistrationForm.get('email')?.dirty || UserRegistrationForm.get('email')?.touched)"
           />
+          <div *ngIf="UserRegistrationForm.get('email')?.invalid && (UserRegistrationForm.get('email')?.dirty || UserRegistrationForm.get('email')?.touched)" class="errorMsg">
+            <div *ngIf="UserRegistrationForm.get('email')?.errors?.['required']">
+              This field is required.
+            </div>
+            <div *ngIf="UserRegistrationForm.get('email')?.errors?.['minlength']">
+              This field must have at least 1 character.
+            </div>
+            <div *ngIf="!UserRegistrationForm.get('email')?.errors?.['required'] && !UserRegistrationForm.get('email')?.errors?.['minlength'] 
+                      && !UserRegistrationForm.get('email')?.errors?.['maxlength'] && UserRegistrationForm.get('email')?.errors?.['emailValidator']">
+            Invalid email format.
           </div>
-        
+          </div>
+          </div>
         <div class="field">
           <label>Password</label>
           <input
@@ -21,6 +34,14 @@
             placeholder="Password"
             formControlName="password"
           />
+          <div *ngIf="UserRegistrationForm.get('password')?.invalid && (UserRegistrationForm.get('password')?.dirty || UserRegistrationForm.get('password')?.touched)" class="errorMsg">
+            <div *ngIf="UserRegistrationForm.get('password')?.errors?.['required']">
+              This field is required.
+            </div>
+            <div *ngIf="UserRegistrationForm.get('password')?.errors?.['minlength']">
+              This field have at least 5 characters.
+            </div>
+          </div>
         </div>  
         <button class="fluid ui button blue" (click)="userRegistrationSubmit()"  >Register</button>
         <br>
