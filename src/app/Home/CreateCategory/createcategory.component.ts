@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UsersDataService } from 'src/app/Users/Shared/users-data.service';
 import { CategoriesModel } from '../AddCategory/Model/categories.model';
 
 @Component({
@@ -10,7 +11,7 @@ export class CreatecategoryComponent implements OnInit {
   
   Categoryname !: CategoriesModel ;
   categoryName : string ="";
-  constructor() { }
+  constructor(private _userdataservice:UsersDataService) { }
   
   ngOnInit(): void {
   } 
@@ -25,6 +26,7 @@ export class CreatecategoryComponent implements OnInit {
     debugger
 
     let categorylist: CategoriesModel = {
+      userId : this._userdataservice.loginedUserId,
       categoryname: this.categoryName
     }
 

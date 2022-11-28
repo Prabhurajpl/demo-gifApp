@@ -10,7 +10,7 @@ import { emailValidator } from '../Directives/email-validator.directive';
   templateUrl: './user-login.component.html',
   styleUrls: ['./user-login.component.scss']
 })
-export class UserLoginComponent implements OnInit {
+export class UserLoginComponent implements OnInit { 
   
   user! : User;
   error : string ="";
@@ -36,6 +36,7 @@ export class UserLoginComponent implements OnInit {
     this.SetUserData(resp.user);
     this._userdataservice.userAuthentication(true);
     this._userdataservice.loginedUserEmail = resp.user?.email as string;
+    this._userdataservice.loginedUserId = resp.user?.uid as string;
     this._router.navigateByUrl('home');
   })
   .catch((error) =>{
