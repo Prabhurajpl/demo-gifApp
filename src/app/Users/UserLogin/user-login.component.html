@@ -11,6 +11,19 @@
             placeholder="Email"
             formControlName="email"
           />
+          <div *ngIf="loginForm.get('email')?.invalid && (loginForm.get('email')?.dirty || loginForm.get('email')?.touched)" class="errorMsg">
+            <div *ngIf="loginForm.get('email')?.errors?.['required']">
+              This field is required.
+            </div>
+            <div *ngIf="loginForm.get('email')?.errors?.['minlength']">
+              This field must have at least 1 character.
+            </div>
+            <div *ngIf="!loginForm.get('email')?.errors?.['required'] && !loginForm.get('email')?.errors?.['minlength'] 
+                      && !loginForm.get('email')?.errors?.['maxlength'] && loginForm.get('email')?.errors?.['emailValidator']">
+            Invalid email format.
+          </div>
+          </div>
+
           </div>
         
         <div class="field">
