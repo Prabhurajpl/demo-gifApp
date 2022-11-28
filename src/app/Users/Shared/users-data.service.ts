@@ -13,27 +13,20 @@ export class UsersDataService {
   isLoginedUser : boolean =false;
   user! : User;
   loginedUserEmail :string ="" ;
+  loginedUserId:string="";
   constructor( public _angularFirestore: AngularFirestore,
     public _angularFireAuth: AngularFireAuth,
     public _router: Router,
     public _ngZone: NgZone) { }
 
   SignUp(email: string, password: string) {
-    return this._angularFireAuth
-      .createUserWithEmailAndPassword(email, password)
-      .then((user) => {
-       // this.SetUserData(result.user);
-       
-      })
-      .catch((error) => {
-        window.alert(error.message);
-      });
+    return this._angularFireAuth.createUserWithEmailAndPassword(email, password)
   }
 
   signInUser(email: string, password: string) {
     return this._angularFireAuth.signInWithEmailAndPassword(email, password);
    
-}
+  }
 
   userAuthentication(loginstatus:boolean) { 
     return (loginstatus) ? this.isLoginedUser = true: this.isLoginedUser = false;
