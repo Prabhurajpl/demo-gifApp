@@ -1,3 +1,4 @@
+import { CategoriesModel } from './../AddCategory/Model/categories.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoryListComponent implements OnInit {
   
-  categorylist! :string[];
+  categorylist! :Array<CategoriesModel>;
   constructor() { }
   
   ngOnInit(): void {

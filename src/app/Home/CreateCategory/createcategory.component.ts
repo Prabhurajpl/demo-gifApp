@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CategoriesModel } from '../AddCategory/Model/categories.model';
 
 @Component({
   selector: 'createcategory',
@@ -7,12 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreatecategoryComponent implements OnInit {
   
-  Categoryname !:string[];
-  category : string ="";
+  Categoryname !: CategoriesModel ;
+  categoryName : string ="";
   constructor() { }
   
   ngOnInit(): void {
-  }
+  } 
 
   // createCategory(){
   //  debugger
@@ -22,15 +23,21 @@ export class CreatecategoryComponent implements OnInit {
 
   createCategory() {
     debugger
-    if(this.category != ''){
+
+    let categorylist: CategoriesModel = {
+      categoryname: this.categoryName
+    }
+
+
+    if(this.categoryName != ''){
     let categories = [];
     if (localStorage.getItem("Categories")) {
       categories = JSON.parse(localStorage.getItem("Categories") || "{}");
-      categories = [this.category, ...categories];
+      categories = [categorylist, ...categories];
       
     }
     else {
-      categories = [this.category];
+      categories = [categorylist];
     }
     localStorage.setItem("Categories", JSON.stringify(categories));
   }
