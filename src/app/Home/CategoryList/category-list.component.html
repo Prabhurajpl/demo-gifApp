@@ -1,7 +1,7 @@
   
     <div class="sidebar">
      <ul *ngFor="let category of categorylist">
-      <li>{{category}}</li>
+      <li>{{category.categoryname}}</li>
      </ul>
      <div>
         <button  [routerLink]="['category']" type="button" class="createbtn">Create</button>

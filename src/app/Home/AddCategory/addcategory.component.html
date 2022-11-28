@@ -2,7 +2,7 @@
     <div class="categorysection">
         <label >Add to category </label>
         <select [(ngModel)]="selectedValue">
-         <option *ngFor="let category of categorylist; let i =index">{{category}}</option>
+         <option *ngFor="let category of categorylist; let i =index">{{category.categoryname}}</option>
         </select>
     </div>
     <div class="btnaddsection">
