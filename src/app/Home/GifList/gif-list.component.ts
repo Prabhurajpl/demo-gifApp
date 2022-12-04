@@ -1,10 +1,6 @@
-import { CategoryListComponent } from './../CategoryList/category-list.component';
-import { CategoryModel } from './shared/Model/category.model';
 import { GifListService } from './shared/gif-list.service';
 import { Component, Input, OnChanges, OnInit, SimpleChanges, ViewChild } from '@angular/core';
-import { Observable } from 'rxjs';
-import { AddcategoryComponent } from '../AddCategory/addcategory.component';
-
+import { AddcategoryComponent } from '../addcategory/addcategory.component';
 
 @Component({
   selector: 'gif-list',

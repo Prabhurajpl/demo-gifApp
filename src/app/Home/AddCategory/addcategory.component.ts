@@ -1,5 +1,4 @@
 import { CategoriesModel } from './Model/categories.model';
-import { Observable, from, map, of } from 'rxjs';
 import { CategoryData, loginuserDatalist } from './Model/category-data.model';
 import { Component, OnInit } from '@angular/core';
 

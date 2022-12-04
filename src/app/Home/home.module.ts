@@ -7,11 +7,11 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import { SearchComponent } from './Search/search.component';
 import {MatButtonModule} from '@angular/material/button';
 import { HomeComponent } from './home.component';
-import { AddcategoryComponent } from './AddCategory/addcategory.component';
 import { GifListComponent } from './GifList/gif-list.component';
 import { FormsModule } from '@angular/forms';
 import { CreatecategoryComponent } from './CreateCategory/createcategory.component';
 import { SavedcategoriesComponent } from './savedcategories/savedcategories.component';
+import { AddcategoryComponent } from './addcategory/addcategory.component';
 
 
 
@@ -21,11 +21,11 @@ import { SavedcategoriesComponent } from './savedcategories/savedcategories.comp
     CategoryListComponent,
     SearchComponent,
     HomeComponent,
-    AddcategoryComponent,
     GifListComponent,
     CreatecategoryComponent,
     SavedcategoriesComponent,
-    CheckboxDirective
+    CheckboxDirective,
+    AddcategoryComponent
   ],
   imports: [
     CommonModule,

@@ -1,7 +1,6 @@
 import { SavedcategoriesComponent } from './savedcategories/savedcategories.component';
 import { GifListComponent } from './GifList/gif-list.component';
 import { CreatecategoryComponent } from './CreateCategory/createcategory.component';
-import { AddcategoryComponent } from './AddCategory/addcategory.component';
 import { HomeComponent } from './home.component';
 import { SearchComponent } from './Search/search.component';
 import { CategoryListComponent } from './CategoryList/category-list.component';
@@ -9,7 +8,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from '../Guards/auth.guard';
-
+import { AddcategoryComponent } from './addcategory/addcategory.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent,
