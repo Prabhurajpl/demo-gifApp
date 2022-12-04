@@ -1,4 +1,4 @@
-import { UsersDataService } from './../Users/Shared/users-data.service';
+import { UsersDataService } from '../Users/Shared/users-data.service';
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { Observable } from 'rxjs';
