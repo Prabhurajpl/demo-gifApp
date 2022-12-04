@@ -1,7 +1,7 @@
 import { Router } from '@angular/router';
-import { GifListService } from './../GifList/shared/gif-list.service';
+import { GifListService } from '../GifList/shared/gif-list.service';
 import { filter } from 'rxjs';
-import { CategoriesModel } from './../addcategory/Model/categories.model';
+import { CategoriesModel } from '../addcategory/Model/categories.model';
 import { Component, OnInit } from '@angular/core';
 import { UsersDataService } from 'src/app/Users/Shared/users-data.service';
 
