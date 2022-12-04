@@ -1,9 +1,9 @@
 import { SavedcategoriesComponent } from './savedcategories/savedcategories.component';
-import { GifListComponent } from './GifList/gif-list.component';
 import { CreatecategoryComponent } from './create-category/createcategory.component';
 import { HomeComponent } from './home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { GifListComponent } from './gif-list/gif-list.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent,

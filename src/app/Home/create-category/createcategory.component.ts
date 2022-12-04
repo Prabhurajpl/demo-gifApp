@@ -1,7 +1,7 @@
-import { GifListService } from '../GifList/shared/gif-list.service';
 import { Component, OnInit } from '@angular/core';
 import { UsersDataService } from 'src/app/Users/Shared/users-data.service';
 import { CategoriesModel } from '../addcategory/Model/categories.model';
+import { GifListService } from '../gif-list/shared/gif-list.service';
 
 @Component({
   selector: 'createcategory',

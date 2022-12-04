@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GifListService } from '../GifList/shared/gif-list.service';
-
+import { GifListService } from '../gif-list/shared/gif-list.service';
 @Component({
   selector: 'gif-search',
   templateUrl: './search.component.html',
