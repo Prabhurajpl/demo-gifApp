@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { emailValidator } from '../Directives/email-validator.directive';
 import { UsersDataService } from '../Shared/users-data.service';
 
 @Component({
@@ -12,10 +11,11 @@ import { UsersDataService } from '../Shared/users-data.service';
 export class UserRegistrationComponent implements OnInit {
 
   constructor(private _router: Router, private _userdataservice: UsersDataService) { }
+   EMAIL_REGEXP = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
   UserRegistrationForm = new FormGroup({
     email: new FormControl('', [
-      Validators.required, Validators.email, Validators.minLength(1),
-      emailValidator()]),
+      Validators.required, Validators.email, Validators.minLength(1),Validators.pattern(this.EMAIL_REGEXP)]),
     password: new FormControl('', [
       Validators.required,
       Validators.minLength(5),
