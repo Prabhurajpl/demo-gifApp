@@ -1,0 +1,25 @@
+<div>
+  <category-list></category-list>
+</div>
+<div class="backbtn">
+  <div class="backbtn">
+    <button  type="button"(click)="gotoback()" >
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="square" strokeLinejoin="square" strokeWidth={2} d="M11 15l-3-3m0 0l3-3m-3 3h8M3 12a9 9 0 1118 0 9 9 0 01-18 0z" /></svg> back</button>
+    </div>
+</div>
+    <div class="conatiner">
+      <!-- <button type="button" class="text-blue-700 border border-blue-700 hover:bg-blue-700 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:focus:ring-blue-800">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>        <span class="sr-only">Icon description</span>
+      </button> -->
+      
+      <div class="cardsection">
+          <div  class="p-5 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-6 lg:grid-cols-6 xl:grid-cols-6 gap-3" >
+            <div *ngFor="let content of selectedGifList"  class="max-w-sm rounded overflow-hidden shadow-lg">
+             
+              <div class="px-6 py-4 bg-white px-6 pt-10 pb-8">
+                <img src={{content}}.gif/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
