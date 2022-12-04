@@ -1,4 +1,4 @@
-import { UserRegistrationComponent } from './Users/UserRegistration/user-registration.component';
+import { UserRegistrationComponent } from './Users/user-registration/user-registration.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './Guards/auth.guard';

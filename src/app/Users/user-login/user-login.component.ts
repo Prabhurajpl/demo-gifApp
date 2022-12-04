@@ -1,4 +1,4 @@
-import { User } from './../Model/user';
+import { User } from '../Model/user';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { UsersDataService } from '../Shared/users-data.service';

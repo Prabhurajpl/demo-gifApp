@@ -1,5 +1,5 @@
-import { UserLoginComponent } from './UserLogin/user-login.component';
-import { UserRegistrationComponent } from './UserRegistration/user-registration.component';
+import { UserLoginComponent } from './user-login/user-login.component';
+import { UserRegistrationComponent } from './user-registration/user-registration.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';

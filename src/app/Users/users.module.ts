@@ -1,9 +1,9 @@
-import { UserRegistrationComponent } from './UserRegistration/user-registration.component';
+import { UserRegistrationComponent } from './user-registration/user-registration.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
-import { UserLoginComponent } from './UserLogin/user-login.component';
+import { UserLoginComponent } from './user-login/user-login.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { EmailValidatorDirective } from './Directives/email-validator.directive';
 
