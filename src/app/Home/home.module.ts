@@ -9,7 +9,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { HomeComponent } from './home.component';
 import { GifListComponent } from './GifList/gif-list.component';
 import { FormsModule } from '@angular/forms';
-import { CreatecategoryComponent } from './CreateCategory/createcategory.component';
+import { CreatecategoryComponent } from './create-category/createcategory.component';
 import { SavedcategoriesComponent } from './savedcategories/savedcategories.component';
 import { AddcategoryComponent } from './addcategory/addcategory.component';
 
