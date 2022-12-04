@@ -15,7 +15,6 @@ export class SearchComponent implements OnInit {
 
   }
   search() {
-    debugger
     if(this.searchTerm !=''){
       this._giflistService.getGif(this.searchTerm).subscribe(response => {
         this.gifDataList = response;

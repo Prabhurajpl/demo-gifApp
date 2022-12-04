@@ -20,14 +20,10 @@ export class CreatecategoryComponent implements OnInit {
   } 
 
   createCategory() {
-    debugger
-
     let categorylist: CategoriesModel = {
       userId : this._userdataservice.loginedUserId,
       categoryname: this.categoryName
     }
-
-
     if(this.categoryName != ''){
     let categories = [];
     if (localStorage.getItem("Categories")) {

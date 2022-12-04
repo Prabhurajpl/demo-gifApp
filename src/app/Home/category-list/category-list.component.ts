@@ -18,7 +18,6 @@ export class CategoryListComponent implements OnInit {
   constructor(private _userdataservice:UsersDataService,private _giflistservice:GifListService,private _router:Router) { }
   
   ngOnInit(): void {
-    debugger
     let categories = [];
     categories = JSON.parse(localStorage.getItem("Categories") || "{}");
     if(categories.length > 0){  
@@ -29,7 +28,6 @@ export class CategoryListComponent implements OnInit {
   }
     
   handleselectedCategoryclick(event:any){
-    debugger
     this.selectedcatsection
     this.selectedcategory= event.target.text;
     this._router.navigateByUrl(`home/savedcategories/${this.selectedcategory}`);

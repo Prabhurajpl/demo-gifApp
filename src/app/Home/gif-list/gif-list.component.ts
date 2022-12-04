@@ -24,7 +24,6 @@ export class GifListComponent implements OnInit, OnChanges {
   dataList!: any;
 
   ngOnChanges(changes: SimpleChanges): void {
-    debugger
     if (this.gifDataList?.length == 0) {
       this.addcategoryComponent.iscategorychecked = false;
     }
@@ -34,7 +33,6 @@ export class GifListComponent implements OnInit, OnChanges {
 
   }
   itemCheckboxclick(event: any, content: any) {
-    debugger
     const { itemurl:gifUrl } = content;
     if (!this.selectedGifs.includes(gifUrl) && event.target.checked) {
       for (let i = 0; i < this.gifDataList.length; i++) {
@@ -48,8 +46,6 @@ export class GifListComponent implements OnInit, OnChanges {
         this.selectedGifs.splice(index, 1);
       }
     }
-
-
     this.addcategoryComponent.gifLists = this.selectedGifs;
     (this.selectedGifs.length == 0) ? this.addcategoryComponent.iscategorychecked = false
       : this.addcategoryComponent.iscategorychecked = true

@@ -21,7 +21,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
   constructor(private location: Location, private router: Router,private userdataservice:UsersDataService) { }
 
   ngOnInit(): void {
-    debugger
    this.routepathsubscr= this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.currentUrl = event.url;

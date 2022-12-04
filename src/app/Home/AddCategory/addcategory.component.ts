@@ -21,17 +21,14 @@ export class AddcategoryComponent implements OnInit {
 
   }
   ngOnInit(): void {
-    debugger
     this.categorylist = JSON.parse(localStorage.getItem("Categories") || "{}");
 
   }
   handleAddCategoryclick() {
-    debugger
     (this.selectedValue == '') ? window.alert("Select a category") : this.saveDatatostorage();
   }
 
   saveDatatostorage() {
-    debugger
     let categoryItems: any[];
     const userId = JSON.parse(localStorage.getItem("LoginedUserDetails") || "{}")[0].uid;
 

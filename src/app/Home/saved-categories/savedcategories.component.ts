@@ -15,7 +15,6 @@ export class SavedcategoriesComponent implements OnInit {
 
 
   ngOnInit(): void {
-    debugger
     this.activeRoute.params.subscribe((params) => {
       console.log(params)
       let categories = [];
@@ -26,7 +25,6 @@ export class SavedcategoriesComponent implements OnInit {
     
   }
   gotoback() {
-    debugger
     this._router.navigateByUrl('home');
   }
 
