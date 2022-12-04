@@ -1,4 +1,4 @@
-import { SavedcategoriesComponent } from './savedcategories/savedcategories.component';
+import { SavedcategoriesComponent } from './saved-categories/savedcategories.component';
 import { CreatecategoryComponent } from './create-category/createcategory.component';
 import { HomeComponent } from './home.component';
 import { NgModule } from '@angular/core';

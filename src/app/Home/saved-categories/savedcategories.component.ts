@@ -1,5 +1,5 @@
 import { ActivatedRoute, Router, ActivatedRouteSnapshot } from '@angular/router';
-import { UsersDataService } from './../../Users/Shared/users-data.service';
+import { UsersDataService } from '../../Users/Shared/users-data.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
