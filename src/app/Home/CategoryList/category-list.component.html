@@ -1,13 +1,11 @@
-  
-    <div class="sidebar">
+   <div class="sidebar">
      <ul [ngClass]="selectedcategory == category.categoryname ? 'active' : ''" *ngFor="let category of categorylist">
       <li><a  (click)="handleselectedCategoryclick($event)">{{category.categoryname}}</a></li>
      </ul>
      <div>
-        <button  [routerLink]="['category']" type="button" class="createbtn">Create</button>
+        <button (click)="createcategorybtnclick()"  type="button" class="createbtn">Create</button>
     </div>
     </div>
-    <!-- <div class="selectedcatsection" >
-      <gif-list ></gif-list>
-    </div>
-     -->
+
+   
+    

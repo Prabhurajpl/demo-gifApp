@@ -10,6 +10,8 @@
             name="email"
             placeholder="Email"
             formControlName="email"
+            [class.is-invalid]="loginForm.get('email')?.invalid
+            && (loginForm.get('email')?.dirty || loginForm.get('email')?.touched)"
           />
           <div *ngIf="loginForm.get('email')?.invalid && (loginForm.get('email')?.dirty || loginForm.get('email')?.touched)" class="errorMsg">
             <div *ngIf="loginForm.get('email')?.errors?.['required']">

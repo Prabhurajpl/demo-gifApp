@@ -92,10 +92,8 @@ export class AddcategoryComponent implements OnInit {
     let LoginedUserData = existingDataSource.find((item: { usId: string }) => { return item.usId === userId })['data']
     let categoryList = LoginedUserData.find((item: { categoryName: string; }) => { return item.categoryName == this.selectedValue })
     if (categoryList?.categoryName === this.selectedValue) {
-      this.gifLists.every((curElement) => {
-        if (categoryList.gifs.indexOf(curElement) == -1) {
-          categoryList.gifs?.push(curElement);
-        }
+      this.gifLists.map((curElement)=>{
+        categoryList.gifs?.push(curElement);
       })
     }
     else {

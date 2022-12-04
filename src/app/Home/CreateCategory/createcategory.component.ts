@@ -1,3 +1,4 @@
+import { GifListService } from './../GifList/shared/gif-list.service';
 import { Component, OnInit } from '@angular/core';
 import { UsersDataService } from 'src/app/Users/Shared/users-data.service';
 import { CategoriesModel } from '../AddCategory/Model/categories.model';
@@ -11,16 +12,12 @@ export class CreatecategoryComponent implements OnInit {
   
   Categoryname !: CategoriesModel ;
   categoryName : string ="";
-  constructor(private _userdataservice:UsersDataService) { }
+  gifDatalist !:string[];
+  constructor(private _userdataservice:UsersDataService,private _giflistservice:GifListService) { }
   
   ngOnInit(): void {
+    this.gifDatalist = this._giflistservice.giflists;
   } 
-
-  // createCategory(){
-  //  debugger
-  //  this.Categoryname = [this.category]
-  //  localStorage.setItem("Categories", JSON.stringify(this.Categoryname));
-  // }
 
   createCategory() {
     debugger

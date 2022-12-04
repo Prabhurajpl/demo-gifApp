@@ -11,7 +11,7 @@ import { UsersDataService } from '../Shared/users-data.service';
 })
 export class UserRegistrationComponent implements OnInit {
 
-  constructor(private _router:Router,private _userdataservice:UsersDataService) { }
+  constructor(private _router: Router, private _userdataservice: UsersDataService) { }
   UserRegistrationForm = new FormGroup({
     email: new FormControl('', [
       Validators.required, Validators.email, Validators.minLength(1),
@@ -23,18 +23,26 @@ export class UserRegistrationComponent implements OnInit {
   })
   ngOnInit(): void {
   }
-  userRegistrationSubmit(){
+  userRegistrationSubmit() {
+    if(this.UserRegistrationForm.invalid){
+      return
+    }
     const { email: userEmail, password: userPassword } = Object.assign(this.UserRegistrationForm.value)
-    this._userdataservice.SignUp(userEmail,userPassword).then((resp)=>{
-      alert("Your account has been sucessfully created.. ")
+    this._userdataservice.SignUp(userEmail, userPassword).then((resp) => {
+      alert("Verify your email address to finish registeration.. ")
       this._router.navigateByUrl('login');
-    }).catch((error) =>{
+      this._userdataservice.SendVerificationMail();
+    }).catch((error) => {
       console.log(error);
       var errorCode = error.code;
       var errorMessage = error.message;
       if (errorCode === 'auth/email-already-in-use') {
         alert('The email address is already in use by another account');
-      } 
-     })
-   }
+      }
+    })
+
+  }
+
+
+
 }

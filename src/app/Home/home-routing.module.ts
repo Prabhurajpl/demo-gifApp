@@ -1,3 +1,4 @@
+import { SavedcategoriesComponent } from './savedcategories/savedcategories.component';
 import { GifListComponent } from './GifList/gif-list.component';
 import { CreatecategoryComponent } from './CreateCategory/createcategory.component';
 import { AddcategoryComponent } from './AddCategory/addcategory.component';
@@ -14,12 +15,11 @@ const routes: Routes = [
   {path:'',component:HomeComponent,
    children:[
     {path:'giflist',component:GifListComponent },
+  
   ]
   },
-  //{path:'categorylist',component:CategoryListComponent },
- //{path:'Search',component:SearchComponent },
-  //{path:'addcategory',component:AddcategoryComponent },
   {path:'category',component:CreatecategoryComponent },
+  {path:'savedcategories/:name',component:SavedcategoriesComponent}
 
 ];
 

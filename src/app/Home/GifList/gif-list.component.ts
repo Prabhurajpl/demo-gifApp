@@ -39,15 +39,15 @@ export class GifListComponent implements OnInit, OnChanges {
   }
   itemCheckboxclick(event: any, content: any) {
     debugger
-    const gifId = content.id;
-    if (!this.selectedGifs.includes(gifId) && event.target.checked) {
+    const { itemurl:gifUrl } = content;
+    if (!this.selectedGifs.includes(gifUrl) && event.target.checked) {
       for (let i = 0; i < this.gifDataList.length; i++) {
-        if (this.gifDataList[i].id === gifId) {
-          this.selectedGifs.push(content.id)
+        if (this.gifDataList[i].itemurl === gifUrl) {
+          this.selectedGifs.push(gifUrl)
         }
       }
     } else {
-      const index: number = this.selectedGifs.indexOf(gifId);
+      const index: number = this.selectedGifs.indexOf(gifUrl);
       if (index !== -1) {
         this.selectedGifs.splice(index, 1);
       }
