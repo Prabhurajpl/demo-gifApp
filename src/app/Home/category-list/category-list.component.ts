@@ -1,7 +1,6 @@
 import { Router } from '@angular/router';
-import { filter } from 'rxjs';
 import { CategoriesModel } from '../addcategory/Model/categories.model';
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { UsersDataService } from 'src/app/Users/Shared/users-data.service';
 import { GifListService } from '../gif-list/shared/gif-list.service';
 @Component({
@@ -13,9 +12,9 @@ export class CategoryListComponent implements OnInit {
   
   categorylist! :Array<CategoriesModel>;
   selectedcategory ! :string ;
-  selectedcatsection :boolean =false;
-  selectedGifList! :string [];
+  selectedGifList! :any [];
   constructor(private _userdataservice:UsersDataService,private _giflistservice:GifListService,private _router:Router) { }
+ 
   
   ngOnInit(): void {
     let categories = [];
@@ -26,11 +25,11 @@ export class CategoryListComponent implements OnInit {
      })
     }
   }
-    
+ 
   handleselectedCategoryclick(event:any){
-    this.selectedcatsection
     this.selectedcategory= event.target.text;
     this._router.navigateByUrl(`home/savedcategories/${this.selectedcategory}`);
+
   }
 
   createcategorybtnclick(){

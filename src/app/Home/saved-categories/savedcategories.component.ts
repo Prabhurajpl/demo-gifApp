@@ -16,13 +16,15 @@ export class SavedcategoriesComponent implements OnInit {
 
   ngOnInit(): void {
     this.activeRoute.params.subscribe((params) => {
-      console.log(params)
       let categories = [];
       categories = JSON.parse(localStorage.getItem("CategoryList") || "{}");
       let logineduseritem = categories.find((item: { usId: string; }) => { return item.usId === this._userdataservice.loginedUserId }).data
-      this.selectedGifList = logineduseritem.find((item: { categoryName: string; }) => { return item.categoryName === params['name'] }).gifs
+      this.selectedGifList = logineduseritem.find((item: { categoryName: string; }) => {
+        return item.categoryName === params['name']
+      })?.gifs
+
     })
-    
+
   }
   gotoback() {
     this._router.navigateByUrl('home');
